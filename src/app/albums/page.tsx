@@ -16,7 +16,7 @@ const AllProducts = async () => {
           <div className="container px-5 mx-auto">
             <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
               {albums.map((album) => (
-                <Album album={album} />
+                <Album album={album} key={album.id} />
               ))}
             </div>
           </div>

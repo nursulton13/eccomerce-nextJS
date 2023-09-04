@@ -1,15 +1,19 @@
 "use client";
 
 import { UsersType } from "@/interfaces";
+import Image from "next/image";
 import Link from "next/link";
 import React, { FC } from "react";
 
 const User: FC<{ user: UsersType }> = ({ user }) => {
-  console.log(user);
-
   return (
     <div className="p-4 w-full border rounded-lg">
       <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+        <Image
+          src={"https://dummyimage.com/201x201"}
+          alt={user.email}
+          className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+        />
         <img
           alt="team"
           className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
